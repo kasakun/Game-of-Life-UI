@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Game-of-Life-UI.dir/main.cpp.o  -o Game-of-Life-UI 
