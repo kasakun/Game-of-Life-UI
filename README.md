@@ -8,8 +8,10 @@ Adv. Programming Techniques
  
  2. lib and configure code required.
  
- // If have time
+ If have time
+
  3. Parallel(optional) Zeyu Chen, not hard.
+ 
  4. RGB(optional)
 
 
