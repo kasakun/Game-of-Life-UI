@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.cpp
+game.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h
+
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h
+cstdlib
+-
+ctime
+-
+
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp
+game.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h
+

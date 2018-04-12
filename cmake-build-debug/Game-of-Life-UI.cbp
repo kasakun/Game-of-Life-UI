@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.cpp">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp">
 			<Option target="Game-of-Life-UI"/>
 		</Unit>

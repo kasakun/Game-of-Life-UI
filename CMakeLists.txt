@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Game-of-Life-UI
         main.cpp
+        game.cpp
+        game.h
         )
