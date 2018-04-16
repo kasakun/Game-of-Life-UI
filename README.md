@@ -4,7 +4,7 @@ Adv. Programming Techniques
 ## Distribution (temporal)
 
  1. UI, GLUT preferred, or GLFW. Basic UI display. Allow user to load configure file and 
- responsive design.
+ responsive design. Xibei Zhang
  
  2. lib and configure code required.
  
