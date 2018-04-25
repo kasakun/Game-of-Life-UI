@@ -227,9 +227,9 @@ int main(int /* argc */, char ** /* argv */) {
                 if (g.valueofPos(i, j)) {
                     ++liveCell;
                     float timeValue = glfwGetTime();
-                    float r = sin(timeValue + 3) / 2.0f + 0.5f;
-                    float g = sin(timeValue + 2 ) / 2.0f + 0.5f;
-                    float b = sin(timeValue) / 2.0f + 0.5f;
+                    float r = sin(timeValue/5) / 5.0f + 0.6f;
+                    float g = sin(timeValue/10) / 5.0f + 0.3f;
+                    float b = sin(timeValue/2) / 5.0f + 0.5f;
                     glUniform4f(vertexColorLocation, r, g, b, 1.0f);
                 } else
                     glUniform4f(vertexColorLocation, 1.0,  1.0, 1.0f, 1.0f);
