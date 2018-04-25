@@ -226,7 +226,11 @@ int main(int /* argc */, char ** /* argv */) {
 
                 if (g.valueofPos(i, j)) {
                     ++liveCell;
-                    glUniform4f(vertexColorLocation, 0.5f, 0.35f, 0.23f, 1.0f);
+                    float timeValue = glfwGetTime();
+                    float r = sin(timeValue + 3) / 2.0f + 0.5f;
+                    float g = sin(timeValue + 2 ) / 2.0f + 0.5f;
+                    float b = sin(timeValue) / 2.0f + 0.5f;
+                    glUniform4f(vertexColorLocation, r, g, b, 1.0f);
                 } else
                     glUniform4f(vertexColorLocation, 1.0,  1.0, 1.0f, 1.0f);
                 glBindVertexArray(VAOs[i*w + j]);
