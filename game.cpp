@@ -34,6 +34,16 @@ void game::init() {
     const double prob = 0.5;
     for (int i = 0; i < width; ++i) {
         for (int j = 0; j < height; ++j) {
+//            double r = (double)rand() / RAND_MAX;
+            grid[i][j] = false;
+        }
+    }
+}
+
+void game::randomPattern() {
+    const double prob = 0.3;
+    for (int i = 0; i < width; ++i) {
+        for (int j = 0; j < height; ++j) {
             double r = (double)rand() / RAND_MAX;
             grid[i][j] = (r < prob);
         }

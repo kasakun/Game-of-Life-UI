@@ -39,6 +39,9 @@ public:
     // return the value of the position (x, y)
     bool valueofPos(const int pos_x, const int pos_y);
 
+    //Pattern
+    void randomPattern();
+
 };
 
 

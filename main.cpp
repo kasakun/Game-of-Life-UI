@@ -23,6 +23,7 @@
 
 #include <GLFW/glfw3.h>
 #include <nanogui/nanogui.h>
+#include <future>
 
 #include "Shader.h"
 #include "game.h"
@@ -41,9 +42,17 @@ bool start = false;
 unsigned int FPS = 24;
 std::string fps;
 std::string cur;
-unsigned long totalCell;
+static unsigned long totalCell;
 unsigned long liveCell;
 unsigned long generation;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// w, h represent the number of cells in row and col.
+int w = 200, h = 200;
+game g(w, h);
+//    g.init();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Screen *screen = nullptr;
 void glfwInitWrapper() {
@@ -76,10 +85,16 @@ void guiMaker(FormHelper *gui, std::string name) {
     gui->addButton("  Pause  ", []() {
         std::cout << "Game paused." << std::endl;start = false;
     })->setTooltip("Pause the Game!");
+    gui->addGroup("Mode");
+    gui->addButton("  Random  ", []() {
+        start = false;
+        g.randomPattern();
+        std::cout << "Random Mode" << std::endl;
+    });
     gui->addGroup("Stats");
     gui->addVariable("FPS", fps)->setEditable(false);
     gui->addVariable("Time", cur)->setEditable(false);
-    gui->addVariable("Total Cells", totalCell)->setEditable(false);
+//    gui->addVariable("Total Cells", )->setEditable(false);
     gui->addVariable("Live Cells", liveCell)->setEditable(false);
     gui->addVariable("Generation", generation)->setEditable(false);
     screen->setVisible(true);
@@ -132,7 +147,7 @@ int main(int /* argc */, char ** /* argv */) {
     glfwInitWrapper();
     // Create a GLFW window object
 
-    GLFWwindow* window = glfwCreateWindow(800, 800, "Game of Life", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(1000, 1000, "Game of Life", nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -155,10 +170,6 @@ int main(int /* argc */, char ** /* argv */) {
     guiMaker(gui, "Menu");
     glfwCallBackSet(window);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // w, h represent the number of cells in row and col.
-    int w = 100, h = 100;totalCell = w*h;
-    game g(w, h);
-    g.init();
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Shader ourShader("vertex.vs", "fragment.frag");
@@ -199,9 +210,8 @@ int main(int /* argc */, char ** /* argv */) {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //     Game loop
     double t1,t2;fps = "0.0";cur = "0.0";liveCell = 0;generation = 0;
+    double compute1, compute2;
     while (!glfwWindowShouldClose(window)) {
-//        glClearColor(0.2f, 0.25f, 0.3f, 1.0f);
-        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ourShader.Use();
@@ -209,14 +219,14 @@ int main(int /* argc */, char ** /* argv */) {
         if (start)
             g.update();
         liveCell = 0;
+        compute1 = glfwGetTime();
         for (int i = 0; i < h; ++i) {
             for (int j = 0; j < w; ++j) {
                 GLint vertexColorLocation = glGetUniformLocation(ourShader.Program, "ourColor");
-//
-                glUniform4f(vertexColorLocation, (float)i/w,  (float)j/h, 0.0f, 1.0f);
+
                 if (g.valueofPos(i, j)) {
                     ++liveCell;
-                    glUniform4f(vertexColorLocation, 0.35f, 0.5f, 0.23f, 1.0f);
+                    glUniform4f(vertexColorLocation, 0.5f, 0.35f, 0.23f, 1.0f);
                 } else
                     glUniform4f(vertexColorLocation, 1.0,  1.0, 1.0f, 1.0f);
                 glBindVertexArray(VAOs[i*w + j]);
@@ -224,6 +234,9 @@ int main(int /* argc */, char ** /* argv */) {
                 glBindVertexArray(0);
             }
         }
+
+        compute2 = glfwGetTime();
+        std::cout << "Elapsed Time" << compute2 - compute1 << "ms" << std::endl;
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Draw nanogui
 
