@@ -31,7 +31,7 @@ game::~game() {
 }
 
 void game::init() {
-    const double prob = 0.3;
+    const double prob = 0.1;
     for (int i = 0; i < width; ++i) {
         for (int j = 0; j < height; ++j) {
             double r = (double)rand() / RAND_MAX;
@@ -40,7 +40,7 @@ void game::init() {
     }
 }
 
-void game::loop() {
+void game::update() {
     for (int i = 0; i < width; ++i) {
         for(int j = 0; j < height; ++j) {
             int neighbors = numofNeighbour(i, j);
@@ -49,13 +49,13 @@ void game::loop() {
                 Nextgrid[i][j] = neighbors == 2 || neighbors == 3;
             }
             else {
-
                 Nextgrid[i][j] = neighbors == 3;
             }
         }
     }
-
+    bool** t = grid;
     grid = Nextgrid;
+    Nextgrid = t;
 }
 
 int game::numofNeighbour(const int pos_x, const int pos_y) {

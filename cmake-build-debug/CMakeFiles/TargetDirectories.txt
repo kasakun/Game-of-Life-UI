@@ -1,3 +1,13 @@
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/rebuild_cache.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/edit_cache.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/CMakeFiles/rebuild_cache.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/CMakeFiles/edit_cache.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/rebuild_cache.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/edit_cache.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir

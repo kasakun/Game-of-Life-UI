@@ -57,28 +57,28 @@ include CMakeFiles/Game-of-Life-UI.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Game-of-Life-UI.dir/flags.make
 
-CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: CMakeFiles/Game-of-Life-UI.dir/flags.make
-CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game-of-Life-UI.dir/main.cpp.o -c /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp
+CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o: CMakeFiles/Game-of-Life-UI.dir/flags.make
+CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o: ../test_new.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o -c /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/test_new.cpp
 
-CMakeFiles/Game-of-Life-UI.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game-of-Life-UI.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp > CMakeFiles/Game-of-Life-UI.dir/main.cpp.i
+CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/test_new.cpp > CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.i
 
-CMakeFiles/Game-of-Life-UI.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game-of-Life-UI.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp -o CMakeFiles/Game-of-Life-UI.dir/main.cpp.s
+CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/test_new.cpp -o CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.s
 
-CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.requires:
+CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.requires
 
-CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.provides: CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.provides
+CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.provides: CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.provides.build
+.PHONY : CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.provides
 
-CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.provides.build: CMakeFiles/Game-of-Life-UI.dir/main.cpp.o
+CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.provides.build: CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o
 
 
 CMakeFiles/Game-of-Life-UI.dir/game.cpp.o: CMakeFiles/Game-of-Life-UI.dir/flags.make
@@ -107,15 +107,16 @@ CMakeFiles/Game-of-Life-UI.dir/game.cpp.o.provides.build: CMakeFiles/Game-of-Lif
 
 # Object files for target Game-of-Life-UI
 Game__of__Life__UI_OBJECTS = \
-"CMakeFiles/Game-of-Life-UI.dir/main.cpp.o" \
+"CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o" \
 "CMakeFiles/Game-of-Life-UI.dir/game.cpp.o"
 
 # External object files for target Game-of-Life-UI
 Game__of__Life__UI_EXTERNAL_OBJECTS =
 
-Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/main.cpp.o
+Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o
 Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/game.cpp.o
 Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/build.make
+Game-of-Life-UI: include/nanogui/libnanogui.so
 Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Game-of-Life-UI"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Game-of-Life-UI.dir/link.txt --verbose=$(VERBOSE)
@@ -125,7 +126,7 @@ CMakeFiles/Game-of-Life-UI.dir/build: Game-of-Life-UI
 
 .PHONY : CMakeFiles/Game-of-Life-UI.dir/build
 
-CMakeFiles/Game-of-Life-UI.dir/requires: CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.requires
+CMakeFiles/Game-of-Life-UI.dir/requires: CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o.requires
 CMakeFiles/Game-of-Life-UI.dir/requires: CMakeFiles/Game-of-Life-UI.dir/game.cpp.o.requires
 
 .PHONY : CMakeFiles/Game-of-Life-UI.dir/requires

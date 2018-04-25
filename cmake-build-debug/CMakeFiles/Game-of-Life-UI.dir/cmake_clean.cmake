@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"
+  "CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o"
   "CMakeFiles/Game-of-Life-UI.dir/game.cpp.o"
   "Game-of-Life-UI.pdb"
   "Game-of-Life-UI"

@@ -33,7 +33,7 @@ public:
     // Initialize the pattern of the game
     void init();
     // Updating function
-    void loop();
+    void update();
     // return the num of neighbours of (x, y)
     int numofNeighbour(const int pos_x, const int pos_y);
     // return the value of the position (x, y)
