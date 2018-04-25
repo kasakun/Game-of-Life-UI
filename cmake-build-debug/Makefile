@@ -202,32 +202,32 @@ game.cpp.s:
 	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/game.cpp.s
 .PHONY : game.cpp.s
 
-test_new.o: test_new.cpp.o
+main.o: main.cpp.o
 
-.PHONY : test_new.o
+.PHONY : main.o
 
 # target to build an object file
-test_new.cpp.o:
-	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o
-.PHONY : test_new.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-test_new.i: test_new.cpp.i
+main.i: main.cpp.i
 
-.PHONY : test_new.i
+.PHONY : main.i
 
 # target to preprocess a source file
-test_new.cpp.i:
-	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.i
-.PHONY : test_new.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-test_new.s: test_new.cpp.s
+main.s: main.cpp.s
 
-.PHONY : test_new.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-test_new.cpp.s:
-	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.s
-.PHONY : test_new.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -245,9 +245,9 @@ help:
 	@echo "... game.o"
 	@echo "... game.i"
 	@echo "... game.s"
-	@echo "... test_new.o"
-	@echo "... test_new.i"
-	@echo "... test_new.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

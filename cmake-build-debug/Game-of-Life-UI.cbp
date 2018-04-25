@@ -804,7 +804,7 @@
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/window.cpp">
 			<Option target="nanogui-obj"/>
 		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/test_new.cpp">
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp">
 			<Option target="Game-of-Life-UI"/>
 		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/CMakeLists.txt">

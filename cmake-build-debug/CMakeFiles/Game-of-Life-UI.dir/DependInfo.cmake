@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/game.cpp.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/test_new.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/test_new.cpp.o"
+  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

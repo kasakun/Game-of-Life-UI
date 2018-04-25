@@ -1308,12 +1308,16 @@ cstdlib
 ctime
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/test_new.cpp
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp
 glad/glad.h
 -
 fstream
 -
 iostream
+-
+iomanip
+-
+sstream
 -
 sys/stat.h
 -

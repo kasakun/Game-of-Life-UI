@@ -36,7 +36,8 @@ add_executable(Game-of-Life-UI
 #        test_gui.cpp
 #        test_texture_method.cpp
 #        test_gl_shader.cpp
-        test_new.cpp
+        main.cpp
+#        example1.cpp
         game.cpp
         game.h
         Shader.h
