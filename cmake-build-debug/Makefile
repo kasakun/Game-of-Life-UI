@@ -175,32 +175,32 @@ glfw_objects/fast:
 	$(MAKE) -f include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/build.make include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/build
 .PHONY : glfw_objects/fast
 
-game.o: game.cpp.o
+Game.o: Game.cpp.o
 
-.PHONY : game.o
+.PHONY : Game.o
 
 # target to build an object file
-game.cpp.o:
-	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/game.cpp.o
-.PHONY : game.cpp.o
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o
+.PHONY : Game.cpp.o
 
-game.i: game.cpp.i
+Game.i: Game.cpp.i
 
-.PHONY : game.i
+.PHONY : Game.i
 
 # target to preprocess a source file
-game.cpp.i:
-	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/game.cpp.i
-.PHONY : game.cpp.i
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/Game.cpp.i
+.PHONY : Game.cpp.i
 
-game.s: game.cpp.s
+Game.s: Game.cpp.s
 
-.PHONY : game.s
+.PHONY : Game.s
 
 # target to generate assembly for a file
-game.cpp.s:
-	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/game.cpp.s
-.PHONY : game.cpp.s
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/Game.cpp.s
+.PHONY : Game.cpp.s
 
 main.o: main.cpp.o
 
@@ -242,9 +242,9 @@ help:
 	@echo "... nanogui-obj"
 	@echo "... glfw"
 	@echo "... glfw_objects"
-	@echo "... game.o"
-	@echo "... game.i"
-	@echo "... game.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

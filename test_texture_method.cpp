@@ -23,7 +23,7 @@
 #include <nanogui/nanogui.h>
 
 #include "Shader.h"
-#include "game.h"
+#include "Game.h"
 
 using namespace nanogui;
 

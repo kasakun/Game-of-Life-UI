@@ -2,9 +2,9 @@
 // Created by Zeyu Chen on 4/12/18.
 //
 
-#include "game.h"
+#include "Game.h"
 
-game::game(const int w, const int h) :width(w), height(h) {
+Game::Game(const int w, const int h) :width(w), height(h) {
     // grid, nextgrid bool**
     grid = new bool*[width];
     Nextgrid = new bool*[width];
@@ -22,7 +22,7 @@ game::game(const int w, const int h) :width(w), height(h) {
     srand((unsigned)time(NULL));
 }
 
-game::~game() {
+Game::~Game() {
     delete [] grid;
     delete [] Nextgrid;
     delete [] x;
@@ -30,7 +30,7 @@ game::~game() {
 
 }
 
-void game::init() {
+void Game::init() {
     const double prob = 0.5;
     for (int i = 0; i < width; ++i) {
         for (int j = 0; j < height; ++j) {
@@ -40,7 +40,7 @@ void game::init() {
     }
 }
 
-void game::randomPattern() {
+void Game::randomPattern() {
     const double prob = 0.3;
     for (int i = 0; i < width; ++i) {
         for (int j = 0; j < height; ++j) {
@@ -50,7 +50,7 @@ void game::randomPattern() {
     }
 }
 
-void game::update() {
+void Game::update() {
     for (int i = 0; i < width; ++i) {
         for(int j = 0; j < height; ++j) {
             int neighbors = numofNeighbour(i, j);
@@ -68,7 +68,7 @@ void game::update() {
     Nextgrid = t;
 }
 
-int game::numofNeighbour(const int pos_x, const int pos_y) {
+int Game::numofNeighbour(const int pos_x, const int pos_y) {
     // inside each domain
     int n = 0;
 
@@ -93,6 +93,6 @@ int game::numofNeighbour(const int pos_x, const int pos_y) {
     return n;
 }
 
-bool game::valueofPos(const int pos_x, const int pos_y) {
+bool Game::valueofPos(const int pos_x, const int pos_y) {
     return grid[pos_x][pos_y];
 }

@@ -1286,6 +1286,16 @@ vector
 nanogui/widget.h
 -
 
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp
+Game.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
+
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
+cstdlib
+-
+ctime
+-
+
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h
 string
 -
@@ -1296,16 +1306,6 @@ sstream
 iostream
 -
 glad/glad.h
--
-
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.cpp
-game.h
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h
-
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h
-cstdlib
--
-ctime
 -
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp
@@ -1329,6 +1329,6 @@ future
 -
 Shader.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h
-game.h
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h
+Game.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
 

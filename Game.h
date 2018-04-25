@@ -15,7 +15,7 @@
  *
  *
  */
-class game {
+class Game {
 private:
     int Mode;      // choose BLACK/WHITE or RGB
     bool** grid;
@@ -28,9 +28,9 @@ private:
     int height;
 
 public:
-    game(const int w, const int h);
-    ~game();
-    // Initialize the pattern of the game
+    Game(const int w, const int h);
+    ~Game();
+    // Initialize the pattern of the Game
     void init();
     // Updating function
     void update();

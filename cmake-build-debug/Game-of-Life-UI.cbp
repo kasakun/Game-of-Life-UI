@@ -354,6 +354,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h">
 			<Option target="Game-of-Life-UI"/>
 		</Unit>
@@ -521,12 +527,6 @@
 		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/nanogui_resources.h">
 			<Option target="nanogui-obj"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.cpp">
-			<Option target="Game-of-Life-UI"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/game.h">
-			<Option target="Game-of-Life-UI"/>
 		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glad/include/KHR/khrplatform.h">
 			<Option target="nanogui-obj"/>

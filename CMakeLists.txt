@@ -38,8 +38,8 @@ add_executable(Game-of-Life-UI
 #        test_gl_shader.cpp
         main.cpp
 #        example1.cpp
-        game.cpp
-        game.h
+        Game.cpp
+        Game.h
         Shader.h
         )
 
