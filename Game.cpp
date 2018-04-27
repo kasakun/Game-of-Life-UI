@@ -2,6 +2,7 @@
 // Created by Zeyu Chen on 4/12/18.
 //
 
+#include <iostream>
 #include "Game.h"
 
 Game::Game(const int w, const int h) :width(w), height(h) {
@@ -36,16 +37,6 @@ void Game::init() {
         for (int j = 0; j < height; ++j) {
 //            double r = (double)rand() / RAND_MAX;
             grid[i][j] = false;
-        }
-    }
-}
-
-void Game::randomPattern() {
-    const double prob = 0.3;
-    for (int i = 0; i < width; ++i) {
-        for (int j = 0; j < height; ++j) {
-            double r = (double)rand() / RAND_MAX;
-            grid[i][j] = (r < prob);
         }
     }
 }
@@ -95,4 +86,44 @@ int Game::numofNeighbour(const int pos_x, const int pos_y) {
 
 bool Game::valueofPos(const int pos_x, const int pos_y) {
     return grid[pos_x][pos_y];
+}
+
+void Game::randomPattern() {
+    const double prob = 0.3;
+    for (int i = 0; i < width; ++i) {
+        for (int j = 0; j < height; ++j) {
+            double r = (double)rand() / RAND_MAX;
+            grid[i][j] = (r < prob);
+        }
+    }
+}
+
+bool Game::readLibrary(bool **g, int w, int h) {
+    if (width <= 0 || height <= 0) {
+        std::cout << "Game not initialized!" << std::endl;
+        return false;
+    }
+
+    if (w > width || h >= height) {
+        std::cout << "Game board too small" << std::endl;
+        return false;
+    }
+
+    int startPosx = w == width ? 0: (width - w)/2;
+    int startPosy = h == height? 0: (height - h)/2;
+
+    for (int j = 0; j < height; ++j) {
+        for (int i = 0; i < width; ++i) {
+            grid[i][j] = false;
+        }
+    }
+
+    for (int j = startPosy; j < h; ++j) {
+        for (int i = startPosx; i < w; ++i) {
+            grid[i][j] = g[i - (width - w)/2][j - (height - w)/2];
+        }
+    }
+
+    return true;
+
 }

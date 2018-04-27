@@ -41,6 +41,8 @@ public:
 
     //Pattern
     void randomPattern();
+    //read
+    bool readLibrary(bool** g, int w, int h);
 
 };
 
