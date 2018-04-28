@@ -98,32 +98,11 @@ void Game::randomPattern() {
     }
 }
 
-bool Game::readLibrary(bool **g, int w, int h) {
-    if (width <= 0 || height <= 0) {
-        std::cout << "Game not initialized!" << std::endl;
-        return false;
-    }
-
-    if (w > width || h >= height) {
-        std::cout << "Game board too small" << std::endl;
-        return false;
-    }
-
-    int startPosx = w == width ? 0: (width - w)/2;
-    int startPosy = h == height? 0: (height - h)/2;
-
-    for (int j = 0; j < height; ++j) {
-        for (int i = 0; i < width; ++i) {
-            grid[i][j] = false;
+bool Game::readLibrary(bool **g) {
+    for (int i = 0; i < height; ++i) {
+        for (int j = 0; j < width; ++j) {
+            grid[i][j] = g[i][j];
         }
     }
-
-    for (int j = startPosy; j < h; ++j) {
-        for (int i = startPosx; i < w; ++i) {
-            grid[i][j] = g[i - (width - w)/2][j - (height - w)/2];
-        }
-    }
-
     return true;
-
 }

@@ -32,14 +32,12 @@ include_directories(${NANOGUI_EXTRA_INCS})
 
 # Compile a target using NanoGUI
 add_executable(Game-of-Life-UI
-#        main.cpp
-#        test_gui.cpp
-#        test_texture_method.cpp
-#        test_gl_shader.cpp
         main.cpp
-#        example1.cpp
+#        test_PatternLib.cpp
         Game.cpp
         Game.h
+        PatternLib.cpp
+        PatternLib.h
         Shader.h
         )
 

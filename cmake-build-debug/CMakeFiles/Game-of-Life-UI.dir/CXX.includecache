@@ -1287,6 +1287,8 @@ nanogui/widget.h
 -
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp
+iostream
+-
 Game.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
 
@@ -1294,6 +1296,34 @@ Game.h
 cstdlib
 -
 ctime
+-
+
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.cpp
+unordered_set
+-
+iostream
+-
+fstream
+-
+cstdlib
+-
+dirent.h
+-
+assert.h
+-
+cstring
+-
+sstream
+-
+stack
+-
+vector
+-
+PatternLib.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.h
+
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.h
+unordered_map
 -
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h
@@ -1331,4 +1361,6 @@ Shader.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h
 Game.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
+PatternLib.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.h
 

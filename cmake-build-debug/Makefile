@@ -202,6 +202,33 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+PatternLib.o: PatternLib.cpp.o
+
+.PHONY : PatternLib.o
+
+# target to build an object file
+PatternLib.cpp.o:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/PatternLib.cpp.o
+.PHONY : PatternLib.cpp.o
+
+PatternLib.i: PatternLib.cpp.i
+
+.PHONY : PatternLib.i
+
+# target to preprocess a source file
+PatternLib.cpp.i:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/PatternLib.cpp.i
+.PHONY : PatternLib.cpp.i
+
+PatternLib.s: PatternLib.cpp.s
+
+.PHONY : PatternLib.s
+
+# target to generate assembly for a file
+PatternLib.cpp.s:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/PatternLib.cpp.s
+.PHONY : PatternLib.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -245,6 +272,9 @@ help:
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... PatternLib.o"
+	@echo "... PatternLib.i"
+	@echo "... PatternLib.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

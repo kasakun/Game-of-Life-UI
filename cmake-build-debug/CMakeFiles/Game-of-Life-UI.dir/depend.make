@@ -4,6 +4,9 @@
 CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o: ../Game.h
 
+CMakeFiles/Game-of-Life-UI.dir/PatternLib.cpp.o: ../PatternLib.cpp
+CMakeFiles/Game-of-Life-UI.dir/PatternLib.cpp.o: ../PatternLib.h
+
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../include/nanogui/ext/eigen/Eigen/Cholesky
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../include/nanogui/ext/eigen/Eigen/Core
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../include/nanogui/ext/eigen/Eigen/Geometry
@@ -239,6 +242,7 @@ CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../include/nanogui/include/nanogui/vs
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../include/nanogui/include/nanogui/widget.h
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../include/nanogui/include/nanogui/window.h
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../Game.h
+CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../PatternLib.h
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../Shader.h
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../main.cpp
 

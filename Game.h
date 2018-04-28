@@ -10,7 +10,7 @@
 /*
  * Design: The display is considered as wrapped around, i.e. left side is continuous with the right side.
  *
- * 1. Show Random Pattern
+ * 1. Show Random PatternLib
  * 2. Parallel (available)
  *
  *
@@ -39,10 +39,10 @@ public:
     // return the value of the position (x, y)
     bool valueofPos(const int pos_x, const int pos_y);
 
-    //Pattern
+    //PatternLib
     void randomPattern();
     //read
-    bool readLibrary(bool** g, int w, int h);
+    bool readLibrary(bool** g);
 
 };
 

@@ -27,6 +27,7 @@
 
 #include "Shader.h"
 #include "Game.h"
+#include "PatternLib.h"
 
 #define LTBOUND ((GLfloat)-1.0)
 #define DWBOUND ((GLfloat)-1.0)
@@ -90,6 +91,14 @@ void guiMaker(FormHelper *gui, std::string name) {
         start = false;
         g.randomPattern();
         std::cout << "Random Mode" << std::endl;
+    });
+    gui->addButton("  Lib  ", []() {
+        PatternLib lib(200, 200);
+        lib.initPatternList();
+        bool** pattern = new bool*[200];
+        lib.getPattern("VENETIAN", pattern);
+        g.readLibrary(pattern);
+
     });
     gui->addGroup("Stats");
     gui->addVariable("FPS", fps)->setEditable(false);
@@ -240,7 +249,7 @@ int main(int /* argc */, char ** /* argv */) {
         }
 
         compute2 = glfwGetTime();
-        std::cout << "Elapsed Time" << compute2 - compute1 << "ms" << std::endl;
+//        std::cout << "Elapsed Time" << compute2 - compute1 << "ms" << std::endl;
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Draw nanogui
 

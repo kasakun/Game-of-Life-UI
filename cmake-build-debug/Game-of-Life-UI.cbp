@@ -360,6 +360,12 @@
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h">
 			<Option target="Game-of-Life-UI"/>
 		</Unit>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.cpp">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.h">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h">
 			<Option target="Game-of-Life-UI"/>
 		</Unit>
