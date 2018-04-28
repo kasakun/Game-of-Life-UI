@@ -1,23 +1,24 @@
 # Game-of-Life-UI
-Adv. Programming Techniques
+
+## Ver 0.5.0
+Now the UI is almost done. Still have something to do.
 
 ## TO DO
 ### Library input `Yijun Zhang`
 Urgent! generate a 'Welcome' pattern when first open the game.
-How to deal with *life, *.lif, etc.
 
-
+The library read is on going. I have developed a class with LIF 1.05 version reading.
+Please keep going.
 
 ### UI `Xibei Zhang`
 Known Bugs: The stats is not cleared when restart and shifting modes.
 
-### About mutli-threading
-Since the overhead is mostly on opengl buffer binding. And based on GLFW documentation, we cannot
-bind buffer when we are not in a main thread. Thus, we are not going to move on this part.
+Please add UI to support the lib mode.
 
-### Draw Mode
-Since we are not moving on multi-threading. I will help with the draw mode and keep finding some thing
-interesting.
+### Draw Mode `Xibei Zhang` `Yijun Zhang`
+You two can first try how to implement step 1 and 2.
+
+I will help with the draw mode and keep finding some thing interesting.
 
 What do need to do?
 1. choose a pattern 
