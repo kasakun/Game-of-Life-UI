@@ -68,20 +68,6 @@ bool PatternLib::getPattern(std::string patternName, bool** pattern) {
     std::string path = ROOT + x->first + x->second;
     std::cout<< path << std::endl;
 
-    // loading file
-    f.open(path);
-    assert(f.is_open());
-
-    int* cord = new int[2];
-    std::string line;
-    // cordX, cordY
-    std::vector<std::pair<int, int >> blockCord;
-    // file head
-    while (std::getline(f, line)) {
-        if (line[0] == '#' && line[1] == 'N')
-            break;
-    }
-
     // Clear
     for (int i = 0; i < 200; ++i) {
         *(pattern + i) = new bool[200];
@@ -91,8 +77,31 @@ bool PatternLib::getPattern(std::string patternName, bool** pattern) {
             pattern[i][j] = false;
         }
     }
+
+    // loading file
+    f.open(path);
+    assert(f.is_open());
+
+    // check file version
+    std::string line;
+    std::getline(f, line);
+    // Only implement Life 1.05
+    if (x->second == ".LIF" && line == "#Life 1.05\r") {
+        readLife105(f, pattern);
+    }
+    //std::cout << blockCord.size() << " blocks" << std::endl;
+    f.close();
+    return true;
+}
+
+bool PatternLib::readLife105(std::fstream& f, bool** pattern) {
+    std::string line;
+    while (std::getline(f, line)) {
+        if (line[0] == '#' && line[1] == 'N')
+            break;
+    }
     // Start here
-    int cordShift[2], row, col;
+    int cord[2], cordShift[2], row, col;
     while (std::getline(f, line)) {
         // #P X Y determine the strat of the block
         if (line[0] == '#' && line[1] == 'P') {
@@ -113,7 +122,6 @@ bool PatternLib::getPattern(std::string patternName, bool** pattern) {
                     constructor.push(line[i]);
             }
             std::cout << cord[0] << " " << cord[1] << std::endl;
-            blockCord.push_back(std::pair<int, int>(cord[0], cord[1]));
             cordShift[0] = cord[0] + weight/2; // modify to the matrix in the program
             cordShift[1] = cord[1] + height/2;
 
@@ -126,9 +134,6 @@ bool PatternLib::getPattern(std::string patternName, bool** pattern) {
             }
             ++row;
         }
-
     }
-    //std::cout << blockCord.size() << " blocks" << std::endl;
-    f.close();
     return true;
 }

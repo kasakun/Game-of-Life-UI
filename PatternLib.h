@@ -22,7 +22,7 @@ public:
     int initPatternList();   // search all files in the dir and return the number.
     bool printPatternList();
     bool getPattern(std::string patternName, bool** pattern);
-
+    bool readLife105(std::fstream& f, bool** pattern);
 //    int readWrite(std::string filename1, int *width, int *height) {
 //        std::string filename = "lifep/" + filename1 + ".LIF";
 //        std::int8_t shift;
