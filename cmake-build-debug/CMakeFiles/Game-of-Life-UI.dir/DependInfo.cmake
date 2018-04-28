@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.cpp" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/main.cpp" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
@@ -28,7 +28,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

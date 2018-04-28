@@ -1,4 +1,4 @@
-# Install script for directory: /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src
+# Install script for directory: /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -25,10 +25,5 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   else()
     set(CMAKE_INSTALL_COMPONENT)
   endif()
-endif()
-
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/chenzy/clion/bin/cmake/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/chenzy/clion/bin/cmake/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chenzy/Desktop/Code/C++/Game-of-Life-UI
+CMAKE_SOURCE_DIR = /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/depend.make
@@ -62,58 +62,47 @@ glfw_OBJECTS =
 
 # External object files for target glfw
 glfw_EXTERNAL_OBJECTS = \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_init.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_monitor.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_window.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/xkb_unicode.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/linux_joystick.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_time.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glx_context.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/egl_context.c.o"
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
 
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_init.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_monitor.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_window.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/xkb_unicode.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/linux_joystick.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_time.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glx_context.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/egl_context.c.o
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/build.make
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: /usr/lib/x86_64-linux-gnu/librt.so
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: /usr/lib/x86_64-linux-gnu/libm.so
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: /usr/lib/x86_64-linux-gnu/libX11.so
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: /usr/lib/x86_64-linux-gnu/libXrandr.so
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: /usr/lib/x86_64-linux-gnu/libXinerama.so
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: /usr/lib/x86_64-linux-gnu/libXcursor.so
-include/nanogui/ext_build/glfw/src/libglfw.so.3.2: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking C shared library libglfw.so"
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glfw.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src && $(CMAKE_COMMAND) -E cmake_symlink_library libglfw.so.3.2 libglfw.so.3 libglfw.so
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/build.make
+include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking C shared library libglfw.dylib"
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glfw.dir/link.txt --verbose=$(VERBOSE)
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src && $(CMAKE_COMMAND) -E cmake_symlink_library libglfw.3.2.dylib libglfw.3.dylib libglfw.dylib
 
-include/nanogui/ext_build/glfw/src/libglfw.so.3: include/nanogui/ext_build/glfw/src/libglfw.so.3.2
-	@$(CMAKE_COMMAND) -E touch_nocreate include/nanogui/ext_build/glfw/src/libglfw.so.3
+include/nanogui/ext_build/glfw/src/libglfw.3.dylib: include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib
+	@$(CMAKE_COMMAND) -E touch_nocreate include/nanogui/ext_build/glfw/src/libglfw.3.dylib
 
-include/nanogui/ext_build/glfw/src/libglfw.so: include/nanogui/ext_build/glfw/src/libglfw.so.3.2
-	@$(CMAKE_COMMAND) -E touch_nocreate include/nanogui/ext_build/glfw/src/libglfw.so
+include/nanogui/ext_build/glfw/src/libglfw.dylib: include/nanogui/ext_build/glfw/src/libglfw.3.2.dylib
+	@$(CMAKE_COMMAND) -E touch_nocreate include/nanogui/ext_build/glfw/src/libglfw.dylib
 
 # Rule to build all files generated by this target.
-include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/build: include/nanogui/ext_build/glfw/src/libglfw.so
+include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/build: include/nanogui/ext_build/glfw/src/libglfw.dylib
 
 .PHONY : include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/build
 
@@ -122,10 +111,10 @@ include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/requires:
 .PHONY : include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/requires
 
 include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/clean:
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/glfw.dir/cmake_clean.cmake
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src && $(CMAKE_COMMAND) -P CMakeFiles/glfw.dir/cmake_clean.cmake
 .PHONY : include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/clean
 
 include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/depend:
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chenzy/Desktop/Code/C++/Game-of-Life-UI /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : include/nanogui/ext_build/glfw/src/CMakeFiles/glfw.dir/depend
 

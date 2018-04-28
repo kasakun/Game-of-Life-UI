@@ -1094,6 +1094,24 @@ stdio.h
 
 ../include/nanogui/include/nanogui/entypo.h
 
+../include/nanogui/include/nanogui/formhelper.h
+nanogui/screen.h
+-
+nanogui/label.h
+-
+nanogui/checkbox.h
+-
+nanogui/textbox.h
+-
+nanogui/combobox.h
+-
+nanogui/colorpicker.h
+-
+nanogui/layout.h
+-
+cassert
+-
+
 ../include/nanogui/include/nanogui/glcanvas.h
 iostream
 -
@@ -1142,6 +1160,64 @@ unordered_map
 
 ../include/nanogui/include/nanogui/messagedialog.h
 nanogui/window.h
+-
+
+../include/nanogui/include/nanogui/nanogui.h
+nanogui/common.h
+-
+nanogui/widget.h
+-
+nanogui/screen.h
+-
+nanogui/theme.h
+-
+nanogui/window.h
+-
+nanogui/layout.h
+-
+nanogui/label.h
+-
+nanogui/checkbox.h
+-
+nanogui/button.h
+-
+nanogui/toolbutton.h
+-
+nanogui/popup.h
+-
+nanogui/popupbutton.h
+-
+nanogui/combobox.h
+-
+nanogui/progressbar.h
+-
+nanogui/entypo.h
+-
+nanogui/messagedialog.h
+-
+nanogui/textbox.h
+-
+nanogui/slider.h
+-
+nanogui/imagepanel.h
+-
+nanogui/imageview.h
+-
+nanogui/vscrollpanel.h
+-
+nanogui/colorwheel.h
+-
+nanogui/graph.h
+-
+nanogui/formhelper.h
+-
+nanogui/stackedwidget.h
+-
+nanogui/tabheader.h
+-
+nanogui/tabwidget.h
+-
+nanogui/glcanvas.h
 -
 
 ../include/nanogui/include/nanogui/object.h
@@ -1234,6 +1310,10 @@ nanogui/common.h
 nanogui/object.h
 -
 
+../include/nanogui/include/nanogui/toolbutton.h
+nanogui/button.h
+-
+
 ../include/nanogui/include/nanogui/vscrollpanel.h
 nanogui/widget.h
 -
@@ -1250,11 +1330,11 @@ vector
 nanogui/widget.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/nanogui_resources.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/nanogui_resources.cpp
 stdint.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/button.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/button.cpp
 nanogui/button.h
 -
 nanogui/theme.h
@@ -1264,7 +1344,7 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/checkbox.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/checkbox.cpp
 nanogui/checkbox.h
 -
 nanogui/opengl.h
@@ -1274,7 +1354,7 @@ nanogui/theme.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/colorpicker.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/colorpicker.cpp
 nanogui/colorpicker.h
 -
 nanogui/layout.h
@@ -1282,7 +1362,7 @@ nanogui/layout.h
 nanogui/colorwheel.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/colorwheel.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/colorwheel.cpp
 nanogui/colorwheel.h
 -
 nanogui/theme.h
@@ -1296,7 +1376,7 @@ Eigen/QR
 Eigen/Geometry
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/combobox.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/combobox.cpp
 nanogui/combobox.h
 -
 nanogui/layout.h
@@ -1306,7 +1386,7 @@ nanogui/serializer/core.h
 cassert
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/common.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/common.cpp
 nanogui/screen.h
 -
 windows.h
@@ -1328,7 +1408,13 @@ signal.h
 sys/dir.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/glcanvas.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/darwin.mm
+nanogui/nanogui.h
+-
+Cocoa/Cocoa.h
+-
+
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/glcanvas.cpp
 nanogui/window.h
 -
 nanogui/screen.h
@@ -1342,7 +1428,7 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/glutil.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/glutil.cpp
 nanogui/glutil.h
 -
 malloc.h
@@ -1354,7 +1440,7 @@ fstream
 Eigen/Geometry
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/graph.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/graph.cpp
 nanogui/graph.h
 -
 nanogui/theme.h
@@ -1364,13 +1450,13 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/imagepanel.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/imagepanel.cpp
 nanogui/imagepanel.h
 -
 nanogui/opengl.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/imageview.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/imageview.cpp
 nanogui/imageview.h
 -
 nanogui/window.h
@@ -1382,7 +1468,7 @@ nanogui/theme.h
 cmath
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/label.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/label.cpp
 nanogui/label.h
 -
 nanogui/theme.h
@@ -1392,7 +1478,7 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/layout.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/layout.cpp
 nanogui/layout.h
 -
 nanogui/widget.h
@@ -1406,7 +1492,7 @@ nanogui/label.h
 numeric
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/messagedialog.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/messagedialog.cpp
 nanogui/messagedialog.h
 -
 nanogui/layout.h
@@ -1416,7 +1502,7 @@ nanogui/button.h
 nanogui/label.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/popup.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/popup.cpp
 nanogui/popup.h
 -
 nanogui/theme.h
@@ -1426,7 +1512,7 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/popupbutton.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/popupbutton.cpp
 nanogui/popupbutton.h
 -
 nanogui/theme.h
@@ -1436,7 +1522,7 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/progressbar.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/progressbar.cpp
 nanogui/progressbar.h
 -
 nanogui/opengl.h
@@ -1444,7 +1530,7 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/screen.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/screen.cpp
 nanogui/screen.h
 -
 nanogui/theme.h
@@ -1466,13 +1552,13 @@ GLFW/glfw3native.h
 nanovg_gl.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/serializer.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/serializer.cpp
 nanogui/serializer/core.h
 -
 iostream
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/slider.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/slider.cpp
 nanogui/slider.h
 -
 nanogui/theme.h
@@ -1482,11 +1568,11 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/stackedwidget.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/stackedwidget.cpp
 nanogui/stackedwidget.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/tabheader.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/tabheader.cpp
 nanogui/tabheader.h
 -
 nanogui/theme.h
@@ -1496,7 +1582,7 @@ nanogui/opengl.h
 numeric
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/tabwidget.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/tabwidget.cpp
 nanogui/tabwidget.h
 -
 nanogui/tabheader.h
@@ -1514,7 +1600,7 @@ nanogui/screen.h
 algorithm
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/textbox.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/textbox.cpp
 nanogui/window.h
 -
 nanogui/screen.h
@@ -1532,7 +1618,7 @@ regex
 iostream
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/theme.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/theme.cpp
 nanogui/theme.h
 -
 nanogui/opengl.h
@@ -1542,7 +1628,7 @@ nanogui/entypo.h
 nanogui_resources.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/vscrollpanel.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/vscrollpanel.cpp
 nanogui/vscrollpanel.h
 -
 nanogui/theme.h
@@ -1552,7 +1638,7 @@ nanogui/opengl.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/widget.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/widget.cpp
 nanogui/widget.h
 -
 nanogui/layout.h
@@ -1568,7 +1654,7 @@ nanogui/screen.h
 nanogui/serializer/core.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/src/window.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/src/window.cpp
 nanogui/window.h
 -
 nanogui/theme.h

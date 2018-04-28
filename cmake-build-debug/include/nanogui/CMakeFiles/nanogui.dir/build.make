@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/chenzy/clion/bin/cmake/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/chenzy/clion/bin/cmake/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chenzy/Desktop/Code/C++/Game-of-Life-UI
+CMAKE_SOURCE_DIR = /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include include/nanogui/CMakeFiles/nanogui.dir/depend.make
@@ -62,106 +62,104 @@ nanogui_OBJECTS =
 
 # External object files for target nanogui
 nanogui_EXTERNAL_OBJECTS = \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_init.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_monitor.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_window.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/xkb_unicode.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/linux_joystick.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_time.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glx_context.c.o" \
-"/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/egl_context.c.o"
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/darwin.mm.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
+"/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
 
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_init.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_monitor.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_window.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/xkb_unicode.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/linux_joystick.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_time.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glx_context.c.o
-include/nanogui/libnanogui.so: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/egl_context.c.o
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui.dir/build.make
-include/nanogui/libnanogui.so: include/nanogui/CMakeFiles/nanogui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library libnanogui.so"
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanogui.dir/link.txt --verbose=$(VERBOSE)
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/darwin.mm.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o
+include/nanogui/libnanogui.dylib: include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui.dir/build.make
+include/nanogui/libnanogui.dylib: include/nanogui/CMakeFiles/nanogui.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library libnanogui.dylib"
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanogui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-include/nanogui/CMakeFiles/nanogui.dir/build: include/nanogui/libnanogui.so
+include/nanogui/CMakeFiles/nanogui.dir/build: include/nanogui/libnanogui.dylib
 
 .PHONY : include/nanogui/CMakeFiles/nanogui.dir/build
 
@@ -170,10 +168,10 @@ include/nanogui/CMakeFiles/nanogui.dir/requires:
 .PHONY : include/nanogui/CMakeFiles/nanogui.dir/requires
 
 include/nanogui/CMakeFiles/nanogui.dir/clean:
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui && $(CMAKE_COMMAND) -P CMakeFiles/nanogui.dir/cmake_clean.cmake
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui && $(CMAKE_COMMAND) -P CMakeFiles/nanogui.dir/cmake_clean.cmake
 .PHONY : include/nanogui/CMakeFiles/nanogui.dir/clean
 
 include/nanogui/CMakeFiles/nanogui.dir/depend:
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chenzy/Desktop/Code/C++/Game-of-Life-UI /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : include/nanogui/CMakeFiles/nanogui.dir/depend
 

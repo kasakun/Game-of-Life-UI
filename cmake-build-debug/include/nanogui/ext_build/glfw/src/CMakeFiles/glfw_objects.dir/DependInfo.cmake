@@ -4,23 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/context.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/egl_context.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/egl_context.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glx_context.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/glx_context.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/init.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/input.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/linux_joystick.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/linux_joystick.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/monitor.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/posix_time.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_time.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/posix_tls.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/vulkan.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/window.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/x11_init.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_init.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/x11_monitor.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_monitor.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/x11_window.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/x11_window.c.o"
-  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/xkb_unicode.c" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/xkb_unicode.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/cocoa_init.m" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/cocoa_joystick.m" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/cocoa_monitor.m" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/cocoa_time.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/cocoa_window.m" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/context.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/init.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/input.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/monitor.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/nsgl_context.m" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/posix_tls.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/vulkan.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o"
+  "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/include/nanogui/ext/glfw/src/window.c" "/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "Clang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C

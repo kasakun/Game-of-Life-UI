@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/chenzy/clion/bin/cmake/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/chenzy/clion/bin/cmake/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chenzy/Desktop/Code/C++/Game-of-Life-UI
+CMAKE_SOURCE_DIR = /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Game-of-Life-UI.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Game-of-Life-UI.dir/flags.make
 
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: CMakeFiles/Game-of-Life-UI.dir/flags.make
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game-of-Life-UI.dir/main.cpp.o -c /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game-of-Life-UI.dir/main.cpp.o -c /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/main.cpp
 
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game-of-Life-UI.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp > CMakeFiles/Game-of-Life-UI.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/main.cpp > CMakeFiles/Game-of-Life-UI.dir/main.cpp.i
 
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game-of-Life-UI.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp -o CMakeFiles/Game-of-Life-UI.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/main.cpp -o CMakeFiles/Game-of-Life-UI.dir/main.cpp.s
 
 CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Game-of-Life-UI.dir/main.cpp.o.provides.build: CMakeFiles/Game-of-Lif
 
 CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o: CMakeFiles/Game-of-Life-UI.dir/flags.make
 CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o: ../Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o -c /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o -c /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.cpp
 
 CMakeFiles/Game-of-Life-UI.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game-of-Life-UI.dir/Game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp > CMakeFiles/Game-of-Life-UI.dir/Game.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.cpp > CMakeFiles/Game-of-Life-UI.dir/Game.cpp.i
 
 CMakeFiles/Game-of-Life-UI.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game-of-Life-UI.dir/Game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp -o CMakeFiles/Game-of-Life-UI.dir/Game.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.cpp -o CMakeFiles/Game-of-Life-UI.dir/Game.cpp.s
 
 CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o.requires:
 
@@ -116,9 +116,9 @@ Game__of__Life__UI_EXTERNAL_OBJECTS =
 Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/main.cpp.o
 Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o
 Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/build.make
-Game-of-Life-UI: include/nanogui/libnanogui.so
+Game-of-Life-UI: include/nanogui/libnanogui.dylib
 Game-of-Life-UI: CMakeFiles/Game-of-Life-UI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Game-of-Life-UI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Game-of-Life-UI"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Game-of-Life-UI.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -136,6 +136,6 @@ CMakeFiles/Game-of-Life-UI.dir/clean:
 .PHONY : CMakeFiles/Game-of-Life-UI.dir/clean
 
 CMakeFiles/Game-of-Life-UI.dir/depend:
-	cd /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chenzy/Desktop/Code/C++/Game-of-Life-UI /home/chenzy/Desktop/Code/C++/Game-of-Life-UI /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug /Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Game-of-Life-UI.dir/depend
 

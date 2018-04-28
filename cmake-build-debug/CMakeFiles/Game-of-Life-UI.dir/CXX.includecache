@@ -1286,17 +1286,17 @@ vector
 nanogui/widget.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.cpp
 Game.h
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.h
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.h
 cstdlib
 -
 ctime
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Shader.h
 string
 -
 fstream
@@ -1308,7 +1308,7 @@ iostream
 glad/glad.h
 -
 
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/main.cpp
 glad/glad.h
 -
 fstream
@@ -1328,7 +1328,7 @@ nanogui/nanogui.h
 future
 -
 Shader.h
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Shader.h
 Game.h
-/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
+/Users/zhangxiaoduo/Downloads/Spring18ECE6122/Game-of-Life-UI/Game.h
 
