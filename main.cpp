@@ -51,8 +51,6 @@ unsigned long generation;
 // w, h represent the number of cells in row and col.
 int w = 200, h = 200;
 Game g(w, h);
-//    g.init();
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Screen *screen = nullptr;
@@ -147,16 +145,11 @@ void glfwBufferSet(GLFWwindow* window, int& width, int& height) {
     glfwSwapBuffers(window);
 }
 
-//shader
-//vertex
-
-//
-//
 int main(int /* argc */, char ** /* argv */) {
     glfwInitWrapper();
     // Create a GLFW window object
 
-    GLFWwindow* window = glfwCreateWindow(1000, 1000, "Game of Life", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(800, 800, "Game of Life", nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -179,7 +172,11 @@ int main(int /* argc */, char ** /* argv */) {
     guiMaker(gui, "Menu");
     glfwCallBackSet(window);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+    PatternLib lib(200, 200);
+    lib.initPatternList();
+    bool** pattern = new bool*[200];
+    lib.getPattern("WELCOME", pattern);
+    g.readLibrary(pattern);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     Shader ourShader("vertex.vs", "fragment.frag");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -190,10 +187,10 @@ int main(int /* argc */, char ** /* argv */) {
             GLfloat iStep = (GLfloat)2.0/w;
             GLfloat jStep = (GLfloat)2.0/h;
             //    X                                    Y                                    Z
-            vertices[0] = LTBOUND + (i + 1)*iStep;vertices[1] = DWBOUND + (j + 1)*jStep;vertices[2] = 0.0f;
-            vertices[3] = LTBOUND + (i + 1)*iStep;vertices[4] = DWBOUND + j*jStep;      vertices[5] = 0.0f;
-            vertices[6] = LTBOUND + i*iStep;      vertices[7] = DWBOUND + j*jStep;      vertices[8] = 0.0f;
-            vertices[9] = LTBOUND + i*iStep;      vertices[10]= DWBOUND + (j + 1)*jStep;vertices[11]= 0.0f;
+            vertices[0] = LTBOUND + (j + 1)*iStep;vertices[1] = DWBOUND + (i + 1)*jStep;vertices[2] = 0.0f;
+            vertices[3] = LTBOUND + (j + 1)*iStep;vertices[4] = DWBOUND + i*iStep;      vertices[5] = 0.0f;
+            vertices[6] = LTBOUND + j*jStep;      vertices[7] = DWBOUND + i*iStep;      vertices[8] = 0.0f;
+            vertices[9] = LTBOUND + j*jStep;      vertices[10]= DWBOUND + (i + 1)*jStep;vertices[11]= 0.0f;
 
             indices[0]=0;indices[1]=1;indices[2]=3;
             indices[3]=1;indices[4]=2;indices[5]=3;
@@ -233,7 +230,7 @@ int main(int /* argc */, char ** /* argv */) {
             for (int j = 0; j < w; ++j) {
                 GLint vertexColorLocation = glGetUniformLocation(ourShader.Program, "ourColor");
 
-                if (g.valueofPos(i, j)) {
+                if (g.valueofPos(h - i - 1, j)) {
                     ++liveCell;
                     float timeValue = glfwGetTime();
                     float r = sin(timeValue/5) / 5.0f + 0.6f;

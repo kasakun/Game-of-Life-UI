@@ -130,7 +130,7 @@ bool PatternLib::readLife105(std::fstream& f, bool** pattern) {
         } else { // must be the last #P's block, use cord directly
             for (int col = cordShift[0]; col < line.length() + cordShift[0]; ++col) {
                 if(line[col - cordShift[0]] == '*')
-                    pattern[col][row] = true;
+                    pattern[row][col] = true;
             }
             ++row;
         }
