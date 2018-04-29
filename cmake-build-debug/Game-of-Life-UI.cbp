@@ -17,21 +17,21 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -819,61 +819,22 @@
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\nanogui\"/>
 		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\nanogui\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\"/>
-		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\"/>
 		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
 			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\CMake\modules\"/>
 		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\CMake\modules\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/CMake/modules/FindVulkan.cmake">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\CMake\modules\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw3Config.cmake.in">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw_config.h.in">
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
 		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw3.pc.in">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
 		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw3Config.cmake.in">
 			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
 		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw_config.h.in">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw3.pc.in">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw3Config.cmake.in">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw_config.h.in">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/glfw3.pc.in">
-			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
-		</Unit>
-		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/include/nanogui/ext/glfw/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\nanogui\ext\glfw\src\"/>
 		</Unit>
 	</Project>
