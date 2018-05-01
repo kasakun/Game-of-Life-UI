@@ -33,14 +33,9 @@
 #define DWBOUND ((GLfloat)-1.0)
 using namespace nanogui;
 
-// HOT Fix Shader file
-static time_t lastShaderVersion;
-static time_t currShaderVersion;
-//
-
-
 bool start = false;
 bool draw = false;
+
 unsigned int FPS = 24;
 std::string fps;
 std::string cur;
@@ -48,9 +43,12 @@ static unsigned long totalCell;
 unsigned long liveCell;
 unsigned long generation;
 
+int rightClick;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// w, h represent the number of cells in row and col.
+// w, h represent the number of cells in row and col; width, height is for window
 int w = 200, h = 200;
+int width, height;
 Game g(w, h);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -87,11 +85,13 @@ void guiMaker(FormHelper *gui, std::string name) {
     })->setTooltip("Pause the Game!");
     gui->addGroup("Mode");
     gui->addButton("  Random  ", []() {
+        draw = false;
         start = false;
         g.randomPattern();
         std::cout << "Random Mode" << std::endl;
     });
     gui->addButton("  Lib  ", []() {
+        draw = false;
         PatternLib lib(200, 200);
         lib.initPatternList();
         bool** pattern = new bool*[200];
@@ -99,9 +99,11 @@ void guiMaker(FormHelper *gui, std::string name) {
         g.readLibrary(pattern);
 
     });
+    gui->addGroup("Draw");
     gui->addButton("  Draw  ", []() {
         g.init();
         draw = true;
+        start = false;
     });
     gui->addGroup("Stats");
     gui->addVariable("FPS", fps)->setEditable(false);
@@ -121,6 +123,8 @@ void glfwCallBackSet(GLFWwindow* window) {
 
     glfwSetMouseButtonCallback(window, [](GLFWwindow *, int button, int action, int modifiers) {
         screen->mouseButtonCallbackEvent(button, action, modifiers);
+        if (button)
+            rightClick = 1;
     });
 
     glfwSetKeyCallback(window, [](GLFWwindow *, int key, int scancode, int action, int mods) {
@@ -150,15 +154,37 @@ void glfwBufferSet(GLFWwindow* window, int& width, int& height) {
     glfwSwapBuffers(window);
 }
 
-void getPosition(int& xGridPos, int& yGridPos, GLFWwindow* window, int width, int height) {
-    double xWindowPos, yWindowPos;
+void paint() {
+    if(rightClick) {
+        if (draw) {
+            int xStep, yStep, x, y;
+            Vector2i mousePos;
 
-    glfwGetCursorPos(window, &xWindowPos, &yWindowPos);
-    int xStep, yStep;
-    xStep = width/w;yStep = height/h;
+            xStep = width/w;yStep = height/h;
+            mousePos = screen->mousePos();
+            x = mousePos[0]/xStep; y = mousePos[1]/yStep;
 
-    xGridPos = (int)xWindowPos/xStep; yGridPos = (int)yWindowPos/yStep;
+            //////////////////////////////////////////////////////////////
+            int size = 3;
+            bool** brush = new bool*[size];
+            for (int i = 0; i < size; ++i)
+                *(brush + i) = new bool[size];
+            for (int i = 0; i < size; ++i)
+                for (int j =0; j < size; ++j)
+                    brush[i][j] = false;
+            brush[1][1] = true;
+            brush[0][1] = true;
+            brush[1][0] = true;
+            brush[0][0] = true;
+            //////////////////////////////////////////////////////////////
+            if (x + size/2 < width && y + size/2 < height && x - size/2 > 0 && y - size/2 > 0)
+                g.paint(x, y, size, brush);
+            rightClick = 0;
+        }
+
+    }
 }
+
 
 int main(int /* argc */, char ** /* argv */) {
     glfwInitWrapper();
@@ -179,14 +205,14 @@ int main(int /* argc */, char ** /* argv */) {
     screen = new Screen();
     screen->initialize(window, true);
 
-    int width, height;
+
     glfwBufferSet(window, width, height);
     // Create nanogui gui
     FormHelper *gui = new FormHelper(screen);
     guiMaker(gui, "Menu");
     glfwCallBackSet(window);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+//    glfwSetMouseButtonCallback(window, mouse_button_callback);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // A welcome pattern
     PatternLib lib(200, 200);
@@ -265,9 +291,6 @@ int main(int /* argc */, char ** /* argv */) {
         compute2 = glfwGetTime();
 //        std::cout << "Elapsed Time" << compute2 - compute1 << "ms" << std::endl;
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        // Draw nanogui
-
-
         if (start) {
             while ((glfwGetTime() - t1) < 1.0/FPS);
             t2 = glfwGetTime();
@@ -278,27 +301,7 @@ int main(int /* argc */, char ** /* argv */) {
             cur = ssCur.str();
             ++generation;
         }
-
-        if (draw) {
-            int x, y;
-            getPosition(x, y, window, width, height);
-
-//            std::cout << x << std::endl;
-            int size = 3;
-            bool** brush = new bool*[size];
-            for (int i = 0; i < size; ++i)
-                *(brush + i) = new bool[size];
-            for (int i = 0; i < size; ++i)
-                for (int j =0; j < size; ++j)
-                    brush[i][j] = false;
-            brush[1][1] = true;
-            brush[0][1] = true;
-            brush[1][0] = true;
-            brush[0][0] = true;
-            if (x + size/2 < width && y + size/2 < height && x - size/2 > 0 && y - size/2 > 0)
-                g.paint(x, y, size, brush);
-
-        }
+        paint();
 
         screen->drawContents();
         screen->drawWidgets();

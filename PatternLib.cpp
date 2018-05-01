@@ -121,7 +121,7 @@ bool PatternLib::readLife105(std::fstream& f, bool** pattern) {
                 if (line[i] == '-' || line[i] >= '0' && line[i] <= '9')
                     constructor.push(line[i]);
             }
-            std::cout << cord[0] << " " << cord[1] << std::endl;
+//            std::cout << cord[0] << " " << cord[1] << std::endl;
             cordShift[0] = cord[0] + weight/2; // modify to the matrix in the program
             cordShift[1] = cord[1] + height/2;
 
