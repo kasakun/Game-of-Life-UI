@@ -32,7 +32,6 @@ Game::~Game() {
 }
 
 void Game::init() {
-    const double prob = 0.5;
     for (int i = 0; i < width; ++i) {
         for (int j = 0; j < height; ++j) {
 //            double r = (double)rand() / RAND_MAX;
@@ -105,4 +104,10 @@ bool Game::readLibrary(bool **g) {
         }
     }
     return true;
+}
+
+bool Game::paint(int pos_x, int pos_y, int size, bool** brush) {
+    for (int i = 0; i < size; ++i)
+        for (int j = 0; j < size; ++j)
+            grid[(pos_y + j - size/2)][ (pos_x + i - size/2)] = brush[i][j];
 }

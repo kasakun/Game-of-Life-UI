@@ -43,6 +43,8 @@ public:
     void randomPattern();
     //read
     bool readLibrary(bool** g);
+    //modify
+    bool paint(int pos_x, int pos_y, int size,  bool** brush);
 
 };
 

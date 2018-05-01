@@ -40,6 +40,7 @@ static time_t currShaderVersion;
 
 
 bool start = false;
+bool draw = false;
 unsigned int FPS = 24;
 std::string fps;
 std::string cur;
@@ -98,6 +99,10 @@ void guiMaker(FormHelper *gui, std::string name) {
         g.readLibrary(pattern);
 
     });
+    gui->addButton("  Draw  ", []() {
+        g.init();
+        draw = true;
+    });
     gui->addGroup("Stats");
     gui->addVariable("FPS", fps)->setEditable(false);
     gui->addVariable("Time", cur)->setEditable(false);
@@ -145,10 +150,19 @@ void glfwBufferSet(GLFWwindow* window, int& width, int& height) {
     glfwSwapBuffers(window);
 }
 
+void getPosition(int& xGridPos, int& yGridPos, GLFWwindow* window, int width, int height) {
+    double xWindowPos, yWindowPos;
+
+    glfwGetCursorPos(window, &xWindowPos, &yWindowPos);
+    int xStep, yStep;
+    xStep = width/w;yStep = height/h;
+
+    xGridPos = (int)xWindowPos/xStep; yGridPos = (int)yWindowPos/yStep;
+}
+
 int main(int /* argc */, char ** /* argv */) {
     glfwInitWrapper();
     // Create a GLFW window object
-
     GLFWwindow* window = glfwCreateWindow(800, 800, "Game of Life", nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -172,6 +186,9 @@ int main(int /* argc */, char ** /* argv */) {
     guiMaker(gui, "Menu");
     glfwCallBackSet(window);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // A welcome pattern
     PatternLib lib(200, 200);
     lib.initPatternList();
     bool** pattern = new bool*[200];
@@ -219,6 +236,7 @@ int main(int /* argc */, char ** /* argv */) {
     double compute1, compute2;
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
+        float timeValue = glfwGetTime();
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ourShader.Use();
         t1 = glfwGetTime();
@@ -232,7 +250,6 @@ int main(int /* argc */, char ** /* argv */) {
 
                 if (g.valueofPos(h - i - 1, j)) {
                     ++liveCell;
-                    float timeValue = glfwGetTime();
                     float r = sin(timeValue/5) / 5.0f + 0.6f;
                     float g = sin(timeValue/10) / 5.0f + 0.3f;
                     float b = sin(timeValue/2) / 5.0f + 0.5f;
@@ -260,6 +277,27 @@ int main(int /* argc */, char ** /* argv */) {
             ssCur << std::fixed << std::setprecision(2) << t2;
             cur = ssCur.str();
             ++generation;
+        }
+
+        if (draw) {
+            int x, y;
+            getPosition(x, y, window, width, height);
+
+//            std::cout << x << std::endl;
+            int size = 3;
+            bool** brush = new bool*[size];
+            for (int i = 0; i < size; ++i)
+                *(brush + i) = new bool[size];
+            for (int i = 0; i < size; ++i)
+                for (int j =0; j < size; ++j)
+                    brush[i][j] = false;
+            brush[1][1] = true;
+            brush[0][1] = true;
+            brush[1][0] = true;
+            brush[0][0] = true;
+            if (x + size/2 < width && y + size/2 < height && x - size/2 > 0 && y - size/2 > 0)
+                g.paint(x, y, size, brush);
+
         }
 
         screen->drawContents();
