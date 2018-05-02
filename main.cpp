@@ -186,14 +186,14 @@ void glfwBufferSet(GLFWwindow* window, int& width, int& height) {
 void paint(Brush& b) {
     if(rightClick) {
         if (draw) {
-            int xStep, yStep, x, y, w, h;
+            int xStep, yStep, x, y, brushh, brushw;
             Vector2i mousePos;
             xStep = width/w;yStep = height/h;
             mousePos = screen->mousePos();x = mousePos[0]/xStep; y = mousePos[1]/yStep;
             b.getBrush(drawList[drawEnum]);
-            b.getBrushSize(h, w);
-            if (x + w/2 < width && y + h/2 < height && x - w/2 > 0 && y - h/2 > 0)
-                g.paint(x, y, h, w, b.brush);
+            b.getBrushSize(brushh, brushw);
+            if (x + brushw/2 < width && y + brushh/2 < height && x - brushw/2 > 0 && y - brushh/2 > 0)
+                g.paint(x, y, brushh, brushw, b.brush);
             rightClick = 0;
         }
     }
