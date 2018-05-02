@@ -1,7 +1,8 @@
-//
-// Created by Zeyu Chen on 4/27/18.
-//
-// Zeyu Chen, Yijun Zhang
+/*
+ * Created by Zeyu Chen on 4/27/18.
+ *
+ * Zeyu Chen, Yijun Zhang
+ */
 
 #include <assert.h>
 #include <cstdlib>

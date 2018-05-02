@@ -1,29 +1,26 @@
 # Game-of-Life-UI
+A user interface for cellular automata. Based on GLFW and nanogui.
 
-## Ver 0.5.0
-Now the UI is almost done. Still have something to do.
+## What is implement
+### Random Mode
+The seed pattern is randomly generated. 
+### Pattern Library
+Provide a seed pattern library
 
-## TO DO
-### Library input `Yijun Zhang`
-Urgent! generate a 'Welcome' pattern when first open the game.
+### Brush Tool
+Provide selectable brushes allow user to customize their own seed pattern.
 
-The library read is on going. I have developed a class with LIF 1.05 version reading.
-Please keep going.
+### Stats Board 
+Show FPS, elapsed time, number of live cells and generations.
 
-### UI `Xibei Zhang`
-Known Bugs: The stats is not cleared when restart and shifting modes.
+## How to run
 
-Please add UI to support the lib mode.
+```$xslt
+cmake .
+make .
+./Game-of-life-UI
+```
 
-### Draw Mode `Xibei Zhang` `Yijun Zhang`
-You two can first try how to implement step 1 and 2.
+## Demo 
 
-I will help with the draw mode and keep finding some thing interesting.
-
-What do need to do?
-1. choose a pattern 
-2. get mouse position
-3. parse parameter to game().
-
-## Others
-String Mode? randomly choose stable or oscili type to construct words.
+The video link:

@@ -1,7 +1,9 @@
-//
-// Created by Zeyu Chen on 4/12/18.
-//
+/*
+ * Created by Zeyu Chen on 4/12/18.
+ */
 
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 #include "Game.h"
 

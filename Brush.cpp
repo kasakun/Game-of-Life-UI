@@ -1,6 +1,6 @@
-//
-// Created by Zeyu Chen on 5/1/18.
-//
+/*
+ * Created by Zeyu Chen on 5/1/18.
+ */
 #include <assert.h>
 #include <cstdlib>
 #include <cstring>
@@ -20,7 +20,6 @@ Brush::Brush() {
 }
 
 Brush::~Brush() {
-    delete[] brush;
 }
 
 int Brush::initBrushList() {

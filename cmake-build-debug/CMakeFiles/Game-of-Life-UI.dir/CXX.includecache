@@ -1313,16 +1313,16 @@ Brush.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.h
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp
+cstdlib
+-
+ctime
+-
 iostream
 -
 Game.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
-cstdlib
--
-ctime
--
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.cpp
 assert.h
