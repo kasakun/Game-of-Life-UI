@@ -37,6 +37,8 @@ add_executable(Game-of-Life-UI
         Game.h
         PatternLib.cpp
         PatternLib.h
+        Brush.cpp
+        Brush.h
         Shader.h
         )
 

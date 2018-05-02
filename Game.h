@@ -44,7 +44,7 @@ public:
     //read
     bool readLibrary(bool** g);
     //modify
-    bool paint(int pos_x, int pos_y, int size,  bool** brush);
+    bool paint(int pos_x, int pos_y, int brushw, int brushh, bool** brush);
 
 };
 

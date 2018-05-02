@@ -354,6 +354,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.cpp">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
+		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.h">
+			<Option target="Game-of-Life-UI"/>
+		</Unit>
 		<Unit filename="/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp">
 			<Option target="Game-of-Life-UI"/>
 		</Unit>

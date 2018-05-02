@@ -2,22 +2,23 @@
 // Created by Zeyu Chen on 4/27/18.
 //
 // Zeyu Chen, Yijun Zhang
-#include <unordered_set>
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-#include <dirent.h>
+
 #include <assert.h>
+#include <cstdlib>
 #include <cstring>
+#include <dirent.h>
+#include <fstream>
+#include <iostream>
 #include <sstream>
 #include <stack>
+#include <unordered_map>
 #include <vector>
 
 #include "PatternLib.h"
 
 #define MAX(X, Y) X > Y? X:Y
-PatternLib::PatternLib(int _weight, int _height) {
-    weight = _weight;
+PatternLib::PatternLib(int _width, int _height) {
+    width = _width;
     height = _height;
     num = 0;
 }
@@ -27,11 +28,13 @@ PatternLib::~PatternLib() {
 
 int PatternLib::initPatternList() {
     DIR* dir;
+    int counter;
     struct dirent *fptr;
 
     dir = opendir(ROOT);
     assert (dir!=NULL);
 
+    counter = 0;
     while ((fptr = readdir(dir)) != NULL) {
         if (strcmp(fptr->d_name, ".") == 0 || strcmp(fptr->d_name, "..") == 0)
             continue;
@@ -47,7 +50,9 @@ int PatternLib::initPatternList() {
         }
         std::string suffix = std::string(fptr->d_name + j, i-j);
         patternList.insert(std::pair<std::string, std::string>(name, suffix));
+        ++counter;
     }
+    return counter;
 }
 bool PatternLib::printPatternList() {
     std::unordered_map<std::string, std::string>::iterator it;
@@ -66,14 +71,14 @@ bool PatternLib::getPattern(std::string patternName, bool** pattern) {
         return false;
     }
     std::string path = ROOT + x->first + x->second;
-    std::cout<< path << std::endl;
+//    std::cout<< path << std::endl;
 
     // Clear
-    for (int i = 0; i < 200; ++i) {
-        *(pattern + i) = new bool[200];
+    for (int i = 0; i < width; ++i) {
+        *(pattern + i) = new bool[width];
     }
-    for (int j = 0; j < 200; ++j) {
-        for (int i = 0; i < 200; ++i) {
+    for (int j = 0; j < height; ++j) {
+        for (int i = 0; i < width; ++i) {
             pattern[i][j] = false;
         }
     }
@@ -122,7 +127,7 @@ bool PatternLib::readLife105(std::fstream& f, bool** pattern) {
                     constructor.push(line[i]);
             }
 //            std::cout << cord[0] << " " << cord[1] << std::endl;
-            cordShift[0] = cord[0] + weight/2; // modify to the matrix in the program
+            cordShift[0] = cord[0] + width/2; // modify to the matrix in the program
             cordShift[1] = cord[1] + height/2;
 
             row = cordShift[1];

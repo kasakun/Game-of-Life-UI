@@ -5,14 +5,14 @@
 #ifndef TEST_PATTERN_H
 #define TEST_PATTERN_H
 
-#include <unordered_map>
+
 
 #define ROOT "Lib/"
 
 class PatternLib{
 private:
     int num;                        // number of patterns
-    int weight;
+    int width;
     int height;
     std::unordered_map<std::string, std::string> patternList;  // store pattern path
 

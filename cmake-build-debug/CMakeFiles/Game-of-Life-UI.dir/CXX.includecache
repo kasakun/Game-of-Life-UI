@@ -1286,6 +1286,32 @@ vector
 nanogui/widget.h
 -
 
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.cpp
+assert.h
+-
+cstdlib
+-
+cstring
+-
+dirent.h
+-
+fstream
+-
+iostream
+-
+sstream
+-
+stack
+-
+unordered_map
+-
+vector
+-
+Brush.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.h
+
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.h
+
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp
 iostream
 -
@@ -1299,23 +1325,23 @@ ctime
 -
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.cpp
-unordered_set
--
-iostream
--
-fstream
+assert.h
 -
 cstdlib
 -
+cstring
+-
 dirent.h
 -
-assert.h
+fstream
 -
-cstring
+iostream
 -
 sstream
 -
 stack
+-
+unordered_map
 -
 vector
 -
@@ -1323,8 +1349,6 @@ PatternLib.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.h
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.h
-unordered_map
--
 
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Shader.h
 string
@@ -1363,4 +1387,6 @@ Game.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.h
 PatternLib.h
 /home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.h
+Brush.h
+/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.h
 

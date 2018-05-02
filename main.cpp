@@ -28,6 +28,7 @@
 #include "Shader.h"
 #include "Game.h"
 #include "PatternLib.h"
+#include "Brush.h"
 
 #define LTBOUND ((GLfloat)-1.0)
 #define DWBOUND ((GLfloat)-1.0)
@@ -44,11 +45,29 @@ unsigned long liveCell;
 unsigned long generation;
 
 int rightClick;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum patterns {
+    pattern1 = 0,
+    pattern2 = 1,
+    pattern3 = 2,
+    pattern4 = 3
+};
 
+patterns patternEnum = pattern1;
+std::vector<std::string> patternsList = {"ACORN", "ADDER", "GOSPERGLIDERGUN", "QUILT"};
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum drawBrush {
+    brush1 = 0,
+    brush2 = 1,
+    brush3 = 2
+};
+
+drawBrush drawEnum = brush1;
+std::vector<std::string> drawList = {"Basic", "Beacon", "Glider"};
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // w, h represent the number of cells in row and col; width, height is for window
-int w = 200, h = 200;
-int width, height;
+static int w = 250, h = 250;
+static int width, height;
 Game g(w, h);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -74,37 +93,41 @@ void glfwInitWrapper() {
 }
 void guiMaker(FormHelper *gui, std::string name) {
     ref<Window> nanoguiWindow = gui->addWindow(Eigen::Vector2i(10, 10), name);
-    gui->setFixedSize(Eigen::Vector2i(60, 30));
-
+    gui->setFixedSize(Eigen::Vector2i(100, 35));
+    gui->setGroupFontSize(24);
+    gui->setLabelFontSize(20);
+    gui->setWidgetFontSize(18);
     gui->addGroup("Controller");
-    gui->addButton("  Start  ", []() {
-        std::cout << "Game start." << std::endl;start = true;
+    gui->addButton("  Continue  ", []() {
+        std::cout << "Game start." << std::endl;start = true;draw = false;
     })->setTooltip("Start the Game!");
     gui->addButton("  Pause  ", []() {
-        std::cout << "Game paused." << std::endl;start = false;
+        std::cout << "Game paused." << std::endl;start = false;draw = false;
     })->setTooltip("Pause the Game!");
-    gui->addGroup("Mode");
-    gui->addButton("  Random  ", []() {
-        draw = false;
-        start = false;
+    gui->addGroup("Random");
+    gui->addButton("  Start  ", []() { start = false;draw = false;
         g.randomPattern();
-        std::cout << "Random Mode" << std::endl;
-    });
-    gui->addButton("  Lib  ", []() {
-        draw = false;
-        PatternLib lib(200, 200);
+        start = true;
+        std::cout << "Random Mode start." << std::endl;
+    })->setTooltip("Start a Random Game");
+    gui->addGroup("Game Library");
+    gui->addVariable("Pattern", patternEnum, true)
+            ->setItems(patternsList);
+    gui->addButton("  Start  ", []() { start = false;draw = false;
+        PatternLib lib(w, h);
         lib.initPatternList();
-        bool** pattern = new bool*[200];
-        lib.getPattern("VENETIAN", pattern);
+        bool** pattern = new bool*[w];
+        lib.getPattern(patternsList[patternEnum], pattern);
         g.readLibrary(pattern);
-
-    });
+        start = true;
+        std::cout << "Random Library start." << std::endl;
+    })->setTooltip("Start the Game");
     gui->addGroup("Draw");
-    gui->addButton("  Draw  ", []() {
-        g.init();
-        draw = true;
-        start = false;
-    });
+    gui->addButton("  Clear  ", []() { g.init();draw = true;start = false; });
+    gui->addVariable("Brush", drawEnum, true)
+            ->setItems(drawList);
+
+
     gui->addGroup("Stats");
     gui->addVariable("FPS", fps)->setEditable(false);
     gui->addVariable("Time", cur)->setEditable(false);
@@ -154,7 +177,7 @@ void glfwBufferSet(GLFWwindow* window, int& width, int& height) {
     glfwSwapBuffers(window);
 }
 
-void paint() {
+void paint(Brush& b) {
     if(rightClick) {
         if (draw) {
             int xStep, yStep, x, y;
@@ -165,20 +188,14 @@ void paint() {
             x = mousePos[0]/xStep; y = mousePos[1]/yStep;
 
             //////////////////////////////////////////////////////////////
-            int size = 3;
-            bool** brush = new bool*[size];
-            for (int i = 0; i < size; ++i)
-                *(brush + i) = new bool[size];
-            for (int i = 0; i < size; ++i)
-                for (int j =0; j < size; ++j)
-                    brush[i][j] = false;
-            brush[1][1] = true;
-            brush[0][1] = true;
-            brush[1][0] = true;
-            brush[0][0] = true;
+            int w, h;
+
+            b.getBrush(drawList[drawEnum]);
+            b.getBrushSize(h, w);
+
             //////////////////////////////////////////////////////////////
-            if (x + size/2 < width && y + size/2 < height && x - size/2 > 0 && y - size/2 > 0)
-                g.paint(x, y, size, brush);
+            if (x + w/2 < width && y + h/2 < height && x - w/2 > 0 && y - h/2 > 0)
+                g.paint(x, y, h, w, b.brush);
             rightClick = 0;
         }
 
@@ -212,12 +229,15 @@ int main(int /* argc */, char ** /* argv */) {
     guiMaker(gui, "Menu");
     glfwCallBackSet(window);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    glfwSetMouseButtonCallback(window, mouse_button_callback);
+    Brush b = Brush();
+    b.initBrushList();
+    b.getBrush("Block");
+    bool xxxx = b.brush[0][0];
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // A welcome pattern
-    PatternLib lib(200, 200);
+    PatternLib lib(w, h);
     lib.initPatternList();
-    bool** pattern = new bool*[200];
+    bool** pattern = new bool*[w];
     lib.getPattern("WELCOME", pattern);
     g.readLibrary(pattern);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -301,7 +321,7 @@ int main(int /* argc */, char ** /* argv */) {
             cur = ssCur.str();
             ++generation;
         }
-        paint();
+        paint(b);
 
         screen->drawContents();
         screen->drawWidgets();

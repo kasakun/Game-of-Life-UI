@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Brush.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/Brush.cpp.o"
   "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/Game.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/Game.cpp.o"
   "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/PatternLib.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/PatternLib.cpp.o"
   "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/main.cpp" "/home/chenzy/Desktop/Code/C++/Game-of-Life-UI/cmake-build-debug/CMakeFiles/Game-of-Life-UI.dir/main.cpp.o"

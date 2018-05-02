@@ -106,8 +106,8 @@ bool Game::readLibrary(bool **g) {
     return true;
 }
 
-bool Game::paint(int pos_x, int pos_y, int size, bool** brush) {
-    for (int i = 0; i < size; ++i)
-        for (int j = 0; j < size; ++j)
-            grid[(pos_y + j - size/2)][ (pos_x + i - size/2)] = brush[i][j];
+bool Game::paint(int pos_x, int pos_y, int brushw, int brushh, bool** brush) {
+    for (int i = 0; i < brushh; ++i)
+        for (int j = 0; j < brushw; ++j)
+            grid[(pos_y + j - brushw/2)][ (pos_x + i - brushh/2)] = brush[j][i];
 }

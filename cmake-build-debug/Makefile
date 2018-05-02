@@ -175,6 +175,33 @@ glfw_objects/fast:
 	$(MAKE) -f include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/build.make include/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/build
 .PHONY : glfw_objects/fast
 
+Brush.o: Brush.cpp.o
+
+.PHONY : Brush.o
+
+# target to build an object file
+Brush.cpp.o:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/Brush.cpp.o
+.PHONY : Brush.cpp.o
+
+Brush.i: Brush.cpp.i
+
+.PHONY : Brush.i
+
+# target to preprocess a source file
+Brush.cpp.i:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/Brush.cpp.i
+.PHONY : Brush.cpp.i
+
+Brush.s: Brush.cpp.s
+
+.PHONY : Brush.s
+
+# target to generate assembly for a file
+Brush.cpp.s:
+	$(MAKE) -f CMakeFiles/Game-of-Life-UI.dir/build.make CMakeFiles/Game-of-Life-UI.dir/Brush.cpp.s
+.PHONY : Brush.cpp.s
+
 Game.o: Game.cpp.o
 
 .PHONY : Game.o
@@ -269,6 +296,9 @@ help:
 	@echo "... nanogui-obj"
 	@echo "... glfw"
 	@echo "... glfw_objects"
+	@echo "... Brush.o"
+	@echo "... Brush.i"
+	@echo "... Brush.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
