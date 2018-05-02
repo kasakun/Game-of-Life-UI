@@ -51,6 +51,16 @@ int Brush::initBrushList() {
     return counter;
 }
 
+std::vector<std::string> Brush::getBrushList() {
+    std::vector<std::string> list;
+    for (auto x:brushList) {
+        list.push_back(x.first);
+    }
+
+    return list;
+}
+
+
 bool Brush::getBrush(std::string brushName) {
     std::string line;
     std::fstream f;
@@ -85,7 +95,7 @@ bool Brush::getBrush(std::string brushName) {
 
     this->brush = new bool*[size[0]];
     for (int i = 0; i < size[0]; ++i)
-        *(this->brush + i) = new bool[size[0]];
+        *(this->brush + i) = new bool[size[1]];
     int row = 0;
     while (std::getline(f, line)) {
         for (int i = 0; i < line.length(); ++i)

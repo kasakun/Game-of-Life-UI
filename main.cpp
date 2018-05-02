@@ -1,12 +1,13 @@
-//
-// Created by Zeyu Chen on 4/23/18.
-//
+/*
+ * Created by Zeyu Chen on 4/23/18.
+ * version@1.0.0
+ */
 
 #if defined(NANOGUI_GLAD)
 #if defined(NANOGUI_SHARED) && !defined(GLAD_GLAPI_EXPORT)
-        #define GLAD_GLAPI_EXPORT
-    #endif
-    #include <glad/glad.h>
+#define GLAD_GLAPI_EXPORT
+#endif
+#include <glad/glad.h>
 #else
 #if defined(__APPLE__)
 #define GLFW_INCLUDE_GLCOREARB
@@ -20,7 +21,6 @@
 #include <iomanip>
 #include <sstream>
 #include <sys/stat.h>
-
 #include <GLFW/glfw3.h>
 #include <nanogui/nanogui.h>
 #include <future>
@@ -33,44 +33,53 @@
 #define LTBOUND ((GLfloat)-1.0)
 #define DWBOUND ((GLfloat)-1.0)
 using namespace nanogui;
-
+//////////////////////////////////////////////////////////////////////////////////////
+// Author: Zeyu Chen (chenzy@gatech.edu)                                                                                 //
+// Game of Life, or so called cellular automata, is a simple ruled based math game. //
+// The interface supports a pattern library, a brush library and random mode.       //
+// Also, a strong file system is implemented which user can simply add pattern file //
+// to the Lib dir or brush dir to add new element without modifying any code.       //
+// The file format so far supported is LIFE 1.05. New format will be supported in   //
+// future.                                                                          //
+//                                                                                  //
+// The default window size is 1000x1000, game borad is 200x200.                     //
+//                                                                                  //
+//                                                                                  //
+//////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//controller
 bool start = false;
 bool draw = false;
+int rightClick;
+unsigned int FPS = 24;  // MAX FPS
 
-unsigned int FPS = 24;
+// stat
 std::string fps;
 std::string cur;
-static unsigned long totalCell;
 unsigned long liveCell;
 unsigned long generation;
 
-int rightClick;
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Pattern, brush library
 enum patterns {
     pattern1 = 0,
     pattern2 = 1,
     pattern3 = 2,
     pattern4 = 3
 };
-
 patterns patternEnum = pattern1;
-std::vector<std::string> patternsList = {"ACORN", "ADDER", "GOSPERGLIDERGUN", "QUILT"};
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+std::vector<std::string> patternsList;
 enum drawBrush {
     brush1 = 0,
     brush2 = 1,
     brush3 = 2
 };
-
 drawBrush drawEnum = brush1;
-std::vector<std::string> drawList = {"Basic", "Beacon", "Glider"};
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+std::vector<std::string> drawList;
 // w, h represent the number of cells in row and col; width, height is for window
-static int w = 250, h = 250;
+static int w = 200, h = 200;
 static int width, height;
 Game g(w, h);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 Screen *screen = nullptr;
 void glfwInitWrapper() {
     glfwInit();
@@ -93,7 +102,7 @@ void glfwInitWrapper() {
 }
 void guiMaker(FormHelper *gui, std::string name) {
     ref<Window> nanoguiWindow = gui->addWindow(Eigen::Vector2i(10, 10), name);
-    gui->setFixedSize(Eigen::Vector2i(100, 35));
+    gui->setFixedSize(Eigen::Vector2i(90, 35));
     gui->setGroupFontSize(24);
     gui->setLabelFontSize(20);
     gui->setWidgetFontSize(18);
@@ -105,7 +114,7 @@ void guiMaker(FormHelper *gui, std::string name) {
         std::cout << "Game paused." << std::endl;start = false;draw = false;
     })->setTooltip("Pause the Game!");
     gui->addGroup("Random");
-    gui->addButton("  Start  ", []() { start = false;draw = false;
+    gui->addButton("  Start  ", []() { start = false;draw = false;glfwSetTime(0.0);generation = 0;
         g.randomPattern();
         start = true;
         std::cout << "Random Mode start." << std::endl;
@@ -113,30 +122,28 @@ void guiMaker(FormHelper *gui, std::string name) {
     gui->addGroup("Game Library");
     gui->addVariable("Pattern", patternEnum, true)
             ->setItems(patternsList);
-    gui->addButton("  Start  ", []() { start = false;draw = false;
+    gui->addButton("  Start  ", []() { start = false;draw = false;glfwSetTime(0.0);generation = 0;
         PatternLib lib(w, h);
         lib.initPatternList();
         bool** pattern = new bool*[w];
-        lib.getPattern(patternsList[patternEnum], pattern);
-        g.readLibrary(pattern);
+        if (lib.getPattern(patternsList[patternEnum], pattern))
+            g.readLibrary(pattern);
         start = true;
-        std::cout << "Random Library start." << std::endl;
+        std::cout << patternEnum << std::endl;
+        std::cout << "Library start." << std::endl;
     })->setTooltip("Start the Game");
     gui->addGroup("Draw");
-    gui->addButton("  Clear  ", []() { g.init();draw = true;start = false; });
+    gui->addButton("  Clear  ", []() { g.init();draw = true;start = false;glfwSetTime(0.0);generation = 0; });
     gui->addVariable("Brush", drawEnum, true)
             ->setItems(drawList);
-
-
     gui->addGroup("Stats");
     gui->addVariable("FPS", fps)->setEditable(false);
     gui->addVariable("Time", cur)->setEditable(false);
-//    gui->addVariable("Total Cells", )->setEditable(false);
     gui->addVariable("Live Cells", liveCell)->setEditable(false);
     gui->addVariable("Generation", generation)->setEditable(false);
     screen->setVisible(true);
     screen->performLayout();
-//    nanoguiWindow->center(); // set the hui at the center of the window
+
 
 }
 void glfwCallBackSet(GLFWwindow* window) {
@@ -176,37 +183,26 @@ void glfwBufferSet(GLFWwindow* window, int& width, int& height) {
     glfwSwapInterval(0);
     glfwSwapBuffers(window);
 }
-
 void paint(Brush& b) {
     if(rightClick) {
         if (draw) {
-            int xStep, yStep, x, y;
+            int xStep, yStep, x, y, w, h;
             Vector2i mousePos;
-
             xStep = width/w;yStep = height/h;
-            mousePos = screen->mousePos();
-            x = mousePos[0]/xStep; y = mousePos[1]/yStep;
-
-            //////////////////////////////////////////////////////////////
-            int w, h;
-
+            mousePos = screen->mousePos();x = mousePos[0]/xStep; y = mousePos[1]/yStep;
             b.getBrush(drawList[drawEnum]);
             b.getBrushSize(h, w);
-
-            //////////////////////////////////////////////////////////////
             if (x + w/2 < width && y + h/2 < height && x - w/2 > 0 && y - h/2 > 0)
                 g.paint(x, y, h, w, b.brush);
             rightClick = 0;
         }
-
     }
 }
 
 
 int main(int /* argc */, char ** /* argv */) {
     glfwInitWrapper();
-    // Create a GLFW window object
-    GLFWwindow* window = glfwCreateWindow(800, 800, "Game of Life", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(1000, 1000, "Game of Life", nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -221,26 +217,24 @@ int main(int /* argc */, char ** /* argv */) {
     // Create a nanogui screen and pass the glfw pointer to initialize
     screen = new Screen();
     screen->initialize(window, true);
-
-
     glfwBufferSet(window, width, height);
     // Create nanogui gui
     FormHelper *gui = new FormHelper(screen);
-    guiMaker(gui, "Menu");
-    glfwCallBackSet(window);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    Brush b = Brush();
+    // Read Pattern Library and Brush List.
+    Brush b = Brush();    // Brush
+    PatternLib lib(w, h); // Pattern
     b.initBrushList();
-    b.getBrush("Block");
-    bool xxxx = b.brush[0][0];
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // A welcome pattern
-    PatternLib lib(w, h);
     lib.initPatternList();
+    patternsList = lib.getPatternList();
+    drawList = b.getBrushList();
+    // Welcome Interface
     bool** pattern = new bool*[w];
     lib.getPattern("WELCOME", pattern);
     g.readLibrary(pattern);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    guiMaker(gui, "Menu");
+    glfwCallBackSet(window);
     Shader ourShader("vertex.vs", "fragment.frag");
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     GLfloat vertices[12];GLuint indices[6];
@@ -277,19 +271,15 @@ int main(int /* argc */, char ** /* argv */) {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//     Game loop
-    double t1,t2;fps = "0.0";cur = "0.0";liveCell = 0;generation = 0;
-    double compute1, compute2;
+    double t1, t2;fps = "0.0";cur = "0.0";liveCell = 0;generation = 0;
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         float timeValue = glfwGetTime();
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ourShader.Use();
         t1 = glfwGetTime();
         if (start)
             g.update();
         liveCell = 0;
-        compute1 = glfwGetTime();
         for (int i = 0; i < h; ++i) {
             for (int j = 0; j < w; ++j) {
                 GLint vertexColorLocation = glGetUniformLocation(ourShader.Program, "ourColor");
@@ -308,9 +298,6 @@ int main(int /* argc */, char ** /* argv */) {
             }
         }
 
-        compute2 = glfwGetTime();
-//        std::cout << "Elapsed Time" << compute2 - compute1 << "ms" << std::endl;
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         if (start) {
             while ((glfwGetTime() - t1) < 1.0/FPS);
             t2 = glfwGetTime();
@@ -327,12 +314,8 @@ int main(int /* argc */, char ** /* argv */) {
         screen->drawWidgets();
         gui->refresh();
         glfwSwapBuffers(window);
-        // Check if any events have been activated (key pressed, mouse moved etc.)
-        // and call corresponding response functions
         glfwPollEvents();
     }
-
-    // Terminate GLFW, clearing any resources allocated by GLFW.
     glfwTerminate();
 
     return 0;

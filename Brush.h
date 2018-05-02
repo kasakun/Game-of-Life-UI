@@ -19,6 +19,7 @@ public:
     Brush();
     ~Brush();
     int initBrushList();
+    std::vector<std::string> getBrushList();
     bool getBrush(std::string brushName);
     bool getBrushSize(int& width, int& height);
 };

@@ -54,6 +54,16 @@ int PatternLib::initPatternList() {
     }
     return counter;
 }
+std::vector<std::string> PatternLib::getPatternList() {
+    std::vector<std::string> list;
+    std::unordered_map<std::string, std::string>::iterator it;
+    for (it = patternList.begin(); it != patternList.end(); ++it) {
+        if (it->first == "WELCOME") continue;
+        list.push_back(it->first.data());
+    }
+
+    return list;
+}
 bool PatternLib::printPatternList() {
     std::unordered_map<std::string, std::string>::iterator it;
     for (it = patternList.begin(); it != patternList.end(); ++it)
