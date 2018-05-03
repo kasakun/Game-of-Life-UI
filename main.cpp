@@ -189,7 +189,11 @@ void paint(Brush& b) {
             int xStep, yStep, x, y, brushh, brushw;
             Vector2i mousePos;
             xStep = width/w;yStep = height/h;
+#if defined(__APPLE__)
+            mousePos = screen->mousePos();x = mousePos[0]*2/xStep; y = mousePos[1]*2/yStep;
+#else
             mousePos = screen->mousePos();x = mousePos[0]/xStep; y = mousePos[1]/yStep;
+#endif
             b.getBrush(drawList[drawEnum]);
             b.getBrushSize(brushh, brushw);
             if (x + brushw/2 < width && y + brushh/2 < height && x - brushw/2 > 0 && y - brushh/2 > 0)
@@ -202,7 +206,7 @@ void paint(Brush& b) {
 
 int main(int /* argc */, char ** /* argv */) {
     glfwInitWrapper();
-    GLFWwindow* window = glfwCreateWindow(1000, 1000, "Game of Life", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(800, 800, "Game of Life", nullptr, nullptr);
     if (window == nullptr) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
