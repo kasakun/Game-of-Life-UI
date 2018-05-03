@@ -4,11 +4,12 @@ A user interface for cellular automata. Based on GLFW and nanogui.
 ## What is implement
 ### Random Mode
 The seed pattern is randomly generated. 
-### Pattern Library
-Provide a seed pattern library
+### Game Library
+Provide a seed library, user can choose the pattern in the internal library. 
 
 ### Brush Tool
-Provide selectable brushes allow user to customize their own seed pattern.
+Provide selectable brushes allow user to customize their own seed pattern. Use left click
+to choose brush, use right click to draw the pattern.
 
 ### Stats Board 
 Show FPS, elapsed time, number of live cells and generations.
@@ -23,4 +24,4 @@ make .
 
 ## Demo 
 
-The video link:
+The video link:https://www.youtube.com/watch?v=hXFlM9DHgwU
