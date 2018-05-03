@@ -76,7 +76,7 @@ enum drawBrush {
 drawBrush drawEnum = brush1;
 std::vector<std::string> drawList;
 // w, h represent the number of cells in row and col; width, height is for window
-static int w = 460, h = 460;
+static int w = 200, h = 200;
 static int width, height;
 Game g(w, h);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -232,10 +232,10 @@ int main(int /* argc */, char ** /* argv */) {
     lib.initPatternList();
     patternsList = lib.getPatternList();
     drawList = b.getBrushList();
-    // Welcome Interface
-//    bool** pattern = new bool*[w];
-//    lib.getPattern("WELCOME", pattern);
-//    g.readLibrary(pattern);
+//     Welcome Interface
+    bool** pattern = new bool*[w];
+    lib.getPattern("WELCOME", pattern);
+    g.readLibrary(pattern);
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     guiMaker(gui, "Menu");
     glfwCallBackSet(window);
@@ -306,7 +306,7 @@ int main(int /* argc */, char ** /* argv */) {
             while ((glfwGetTime() - t1) < 1.0/FPS);
             t2 = glfwGetTime();
             std::stringstream ssFps, ssCur;
-            std::cout << t2 - t1 << std::endl;
+//            std::cout << t2 - t1 << std::endl;
             ssFps << std::fixed << std::setprecision(2) << 1/(t2 - t1);
             fps = ssFps.str();
             ssCur << std::fixed << std::setprecision(2) << t2;
